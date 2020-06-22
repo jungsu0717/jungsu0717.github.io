@@ -112,7 +112,7 @@ author:
   name             : "jsyoon"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Development Space"
-  location         : "Seoul"
+  location         : "서울"
   email            : "jungsu0717@gmail.com"
   links:
     - label: "Email"
