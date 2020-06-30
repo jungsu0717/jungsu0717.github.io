@@ -15,7 +15,7 @@ Model + View + Controller 의 약자
 장점 : 널리 사용되고 있는 패턴이라는 점에 걸맞게 가장 단순하고 적용이 쉬움
 단점 : MVC 패턴의 단점은 View와 Model 사이의 의존성이 높아 복잡해지고 유지보수가 어려워 질 수 있음
 
-
+![mvc](https://user-images.githubusercontent.com/6903839/86111626-f51e8180-bb01-11ea-9975-f75425ec5dbb.png)
 
 Model : 어플리케이션에서 사용되는 데이터와 그 데이터를 처리
 View : 사용자에서 보여지는 UI
