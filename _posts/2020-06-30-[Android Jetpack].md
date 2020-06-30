@@ -46,8 +46,8 @@ ViewModel 에서 LiveData 선언
 
 // MainViewModel.class
 
-
-~~~ public class MainViewModel extends BaseViewModel<MainView> {
+~~~java
+public class MainViewModel extends BaseViewModel<MainView> {
 
 // LiveData 선언 : LiveData 를 사용할 때 MutableLiveData 를 사용한다.
 private final MutableLiveData<ResSI1000> lvResSI1000;
@@ -61,8 +61,8 @@ private final MutableLiveData<ResSI1000> lvResSI1000;
 
 .........
 
-} ~~~
-
+} 
+~~~
 
 * LiveData의 Event 처리 *
 LiveData의 Event에는 setValue 와 postValue 가 있는데 setValue에서는 UI Thread즉 Main Thread에서 실행하고 postValue에서는 Background Thread에서 처리한다.
