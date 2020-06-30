@@ -5,21 +5,23 @@ categories: Android
 ---
 
 # 1) 목차
+---------------------------------------
 * Android Jetpack 이란?
 * Jetpack Components
 * LiveData 란?
 * LiveData 사용 예시
 
 # 2) Android Jetpack 이란?
-
+---------------------------------------
 * Google I/O 2018 에 소개되었으며 Android Architecture (AAC), Kotlin 지원 도구, support library v4, v7, v8, v17 등으로 파편화된 라이브러리를 통합한 도구 및 지침 세트로 Androidx 기반의 구조로 변경
 *  androidx.* 네임스페이스
 *  modern architecture 적용을 빠르게 지원
 *  복잡한 백그라운드 작업과 데이터 Life cycle에 시간을 쏟지 않고 오로지 앱 고유 기능의 개발에 집중하도록 지원
 *  <https://developer.android.com/jetpack?hl=ko> 에서 자세한 내용 참고
 
-# 3) Jetpack Components
 
+# 3) Jetpack Components
+---------------------------------------
 * Jetpack 은 기능에 따라 크게 네 가지의 컴포넌트로 구분 할 수 있으며 독립적인 활용이 가능
 
 * Architecture	
@@ -42,19 +44,21 @@ categories: Android
   
 출처 : <https://velog.io/@tura/android-jetpack-introduction>
 
+
 # 3) LiveData 란?
-Android Jetpack 중 Architecture 컴포넌트에 포함
-Live Cycle 을 알고있는 DataType 으로서 Observer 패턴을 따른다.
-데이터의 변경이 일어났을때 콜백 으로 받아 처리 가능하다.
-단일 효과를 기대하기 어렵지만, Databinding, ViewModel, RoomDatabase 등과 접목하여 사용하면 수십줄의 소스코드를 1~2줄로 바꾸는 기적을 보여줌!!
+---------------------------------------
+* Android Jetpack 중 Architecture 컴포넌트에 포함
+* Live Cycle 을 알고있는 DataType 으로서 Observer 패턴을 따른다.
+* 데이터의 변경이 일어났을때 콜백 으로 받아 처리 가능하다.
+* 단일 효과를 기대하기 어렵지만, Databinding, ViewModel, RoomDatabase 등과 접목하여 사용하면 수십줄의 소스코드를 1~2줄로 바꾸는 기적을 보여줌!!
 
 
 # 4) LiveData 사용 예시 
-ViewModel 에서 LiveData 선언
-
-// MainViewModel.class
+---------------------------------------
+## ViewModel 에서 LiveData 선언
 
 ~~~java
+// MainViewModel.class
 public class MainViewModel extends BaseViewModel<MainView> {
 
 // LiveData 선언 : LiveData 를 사용할 때 MutableLiveData 를 사용한다.
@@ -66,11 +70,11 @@ public class MainViewModel extends BaseViewModel<MainView> {
 } 
 ~~~
 
-* LiveData의 Event 처리 *
-LiveData의 Event에는 setValue 와 postValue 가 있는데 setValue에서는 UI Thread즉 Main Thread에서 실행하고 postValue에서는 Background Thread에서 처리한다.
+* LiveData의 Event 처리
+  - LiveData의 Event에는 setValue 와 postValue 가 있는데 setValue에서는 UI Thread즉 Main Thread에서 실행하고 postValue에서는 Background Thread에서 처리한다.
 
 
-Activity 에서 LiveData Observing
+## Activity 에서 LiveData Observing
 
 ~~~java
 // MainActivity.class
@@ -87,11 +91,11 @@ private void subscribeToLiveData() {
 ~~~
 
 
-ViewModel + DataBinding과 접목하여 사용
+## ViewModel + DataBinding과 접목하여 사용
 
 
 ~~~xml
-// activity_main.xml
+<!-- activity_main.xml -->
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
