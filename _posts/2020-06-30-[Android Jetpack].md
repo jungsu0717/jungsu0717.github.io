@@ -22,17 +22,25 @@ categories: Android
 
 * Jetpack 은 기능에 따라 크게 네 가지의 컴포넌트로 구분 할 수 있으며 독립적인 활용이 가능
 
-기능	설명
-Architecture	a. 구글에서 제안하는 Android Architecture 를 구현할 수 있는 기능들로 구성 
-b. View를 포함한 UI 요소의 lifecycle management 를 비롯하여 LiveData, ViewModel, Room 등의 기능이 여기에 포함
-Foundation	a. 안드로이드 시스템의 핵심 기능을 담당하는 컴포넌트
-b. AppCompat, Kotlin Extension, Multidex 등이 여기에 포함
-Behavior	a. 앱의 동작과 관련된 컴포넌트
-b. Notification, 다운로드 매니저, Permission 관리 기능 등이 여기에 포함
-UI	a. UI개발과 사용의 일관성을 보장해주는 컴포넌트
-b. Animation, Fragment, Layout 등이 여기에 포함
-윤정수 > Android Jetpack > jetpack-image.png
-출처 : https://velog.io/@tura/android-jetpack-introduction
+* Architecture	
+  - 구글에서 제안하는 Android Architecture 를 구현할 수 있는 기능들로 구성 
+  - View를 포함한 UI 요소의 lifecycle management 를 비롯하여 LiveData, ViewModel, Room 등의 기능이 여기에 포함
+
+* Foundation	
+  - 안드로이드 시스템의 핵심 기능을 담당하는 컴포넌트
+  - AppCompat, Kotlin Extension, Multidex 등이 여기에 포함
+
+* Behavior	
+  - 앱의 동작과 관련된 컴포넌트
+  - Notification, 다운로드 매니저, Permission 관리 기능 등이 여기에 포함
+
+* UI	
+  - UI개발과 사용의 일관성을 보장해주는 컴포넌트
+  - Animation, Fragment, Layout 등이 여기에 포함
+  
+  ![jetpack 이미지](https://user-images.githubusercontent.com/6903839/86111624-f485eb00-bb01-11ea-9a47-3bbba53a70d1.png)
+  
+출처 : <https://velog.io/@tura/android-jetpack-introduction>
 
 # 3) LiveData 란?
 Android Jetpack 중 Architecture 컴포넌트에 포함
