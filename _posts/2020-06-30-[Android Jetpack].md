@@ -4,11 +4,13 @@ date: 2020-06-30 11:48:28 -0400
 categories: Android
 ---
 
-1) 목차
-2) Android Jetpack 이란?
-3) Jetpack Components
-3) LiveData 란?
-4) LiveData 사용 예시
+# 1) 목차
+
+* Android Jetpack 이란?
+* Jetpack Components
+* LiveData 란?
+* LiveData 사용 예시
+
 2) Android Jetpack 이란?
 Google I/O 2018 에 소개되었으며 Android Architecture (AAC), Kotlin 지원 도구, support library v4, v7, v8, v17 등으로 파편화된 라이브러리를 통합한 도구 및 지침 세트로 Androidx 기반의 구조로 변경
 androidx.* 네임스페이스
