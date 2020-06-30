@@ -50,17 +50,11 @@ ViewModel 에서 LiveData 선언
 public class MainViewModel extends BaseViewModel<MainView> {
 
 // LiveData 선언 : LiveData 를 사용할 때 MutableLiveData 를 사용한다.
-private final MutableLiveData<ResSI1000> lvResSI1000;
-
-
-.........
-
-
+	private final MutableLiveData<ResSI1000> lvResSI1000;
 	
-    lvResSI1000.setValue(mainData);
-
-.........
-
+	private void setLiveData(ResSI1000 mainData){
+    		lvResSI1000.setValue(mainData);
+	}
 } 
 ~~~
 
@@ -70,37 +64,26 @@ LiveData의 Event에는 setValue 와 postValue 가 있는데 setValue에서는 U
 
 Activity 에서 LiveData Observing
 
+~~~java
 // MainActivity.class
-
-
 public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewModel> implements MainView, HasSupportFragmentInjector {
-
-
-.........
 
 private void subscribeToLiveData() {
 
-
-	// Live Data 를 Observe
+    // Live Data 를 Observe
     viewModel.getLiveData()
 		// Live Data CallBack 처리
 		.observe(this, data -> viewModel.setOvResSI1000(data)
 	);
 }
-
-.........
-
-
-}
-
+~~~
 
 
 ViewModel + DataBinding과 접목하여 사용
 
 
+~~~xml
 // activity_main.xml
-
-
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -110,15 +93,10 @@ ViewModel + DataBinding과 접목하여 사용
         <variable name="viewmodel" type="MainViewModel" />
     </data>
 
-.........
-
 	<TextView
-    	.....
 		// title 값이 변경되는대로 TextView UI 는 자동으로 변경됨
-     	android:text="@{viewmodel.lvResSI1000.title}"
+     		android:text="@{viewmodel.lvResSI1000.title}"
 	</TextView>
-
-
 </layout>
-
+~~~
 
