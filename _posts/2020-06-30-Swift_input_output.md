@@ -1,7 +1,7 @@
 ---
 title: "Swift Input/Output "
 date: 2020-06-30 11:48:28 -0400
-categories: etc
+categories: swift
 ---
 
 # 기존 소스 방식
