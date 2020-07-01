@@ -4,10 +4,9 @@ date: 2020-06-30 11:48:28 -0400
 categories: etc
 ---
 
-변경 전
+# 기존 소스 방식
 
-
-
+~~~swift
 class tmp_ViewModel: ViewModel {
 
     lazy var ob_resData : Observable<ResSI0001> = getData()
@@ -35,16 +34,12 @@ class tmp_ViewModel: ViewModel {
 
 
     func saveBookMark(sisaType: SisaType, idx: Int) {//} -> Observable<> {}
-
-
-
 }
+~~~
 
-변경 후
+# Input / Output 적용
 
-
-
-
+~~~swift
 protocol ViewModelType {
 
     associatedtype Input
@@ -128,28 +123,22 @@ struct Input {}
             .subscribe({ _ in }).disposed(by: disposeBag)
 
     }
-
-
-
-
-
 }
+~~~
+
+
+* protocol을 사용하여 임의의 input, output 을 만듦.
+
+* ViewModelType을 상속받은 후 input, output을 struct 변경 후 따로 구분하여 사용
+
+* ViewController에서는 viewmodel.output.xxx 으로 접근 가능.
 
 
 
-protocol을 사용하여 임의의 input, output 을 만듦.
+# 자세한 내용
 
-ViewModelType을 상속받은 후 input, output을 struct 변경 후 따로 구분하여 사용
+* 일반화된 패턴이 아닌 가독성 혹은 방향성에 따라 달라질 수 있음.
 
-ViewController에서는 viewmodel.output.xxx 으로 접근 가능.
+* 편한 방법을 찾아서 input과 output을 구별 하는 방법으로 쓰면 됨.
 
-
-
-자세한 내용
-
-
-일반화된 패턴이 아닌 가독성 혹은 방향성에 따라 달라질 수 있음.
-
-편한 방법을 찾아서 input과 output을 구별 하는 방법으로 쓰면 됨.
-
-https://mrgamza.tistory.com/509 
+<https://mrgamza.tistory.com/509>
